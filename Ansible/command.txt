@@ -1,0 +1,12 @@
+- ssh-keygen
+- ip addr
+- hostname docker-host
+- ssh-copy-id ansadmin@PRIVATE_IP
+
+- ansible all -m ping
+
+## Stop asking for passphrase when I try to ssh
+--> source: https://unix.stackexchange.com/questions/12195/how-to-avoid-being-asked-passphrase-each-time-i-push-to-bitbucket
+$ exec ssh-agent bash
+$ ssh-add
+Enter passphrase for ~/.ssh/id_rsa: 
